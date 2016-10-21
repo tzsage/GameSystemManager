@@ -5,7 +5,7 @@ using NPOI.SS.Util;
 using System.Data;
 using System.IO;
 
-namespace NFine.Code.Excel
+namespace Code.Excel
 {
     public class NPOIExcel
     {

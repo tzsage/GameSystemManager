@@ -1,7 +1,7 @@
 ﻿/****************************************************************************************************************************************************************/
 using System;
 
-namespace NFine.Domain.Entity.SystemManage
+namespace Domain.Entity.SystemManage
 {
     public class AreaEntity : IEntity<AreaEntity>, ICreationAudited, IDeleteAudited, IModificationAudited
     {

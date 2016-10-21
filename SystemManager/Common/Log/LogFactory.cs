@@ -4,7 +4,7 @@ using System;
 using System.IO;
 using System.Web;
 
-namespace NFine.Code
+namespace Code
 {
     public class LogFactory
     {

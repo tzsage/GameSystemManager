@@ -1,8 +1,8 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Domain.Entity.SystemSecurity;
+using Domain.Entity.SystemSecurity;
 using System.Data.Entity.ModelConfiguration;
 
-namespace NFine.Mapping.SystemSecurity
+namespace Mapping.SystemSecurity
 {
     public class FilterIPMap : EntityTypeConfiguration<FilterIPEntity>
     {

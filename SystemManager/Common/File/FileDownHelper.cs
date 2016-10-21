@@ -4,7 +4,7 @@ using System.IO;
 using System.Threading;
 using System.Web;
 
-namespace NFine.Code
+namespace Code
 {
     public class FileDownHelper
     {

@@ -1,7 +1,7 @@
 ﻿/****************************************************************************************************************************************************************/
 using System;
 
-namespace NFine.Domain.Entity.SystemManage
+namespace Domain.Entity.SystemManage
 {
     public class ModuleEntity : IEntity<ModuleEntity>, ICreationAudited, IModificationAudited, IDeleteAudited
     {

@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Web;
 
-namespace NFine.Code
+namespace Code
 {
     public class FileHelper
     {

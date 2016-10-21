@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
 
-namespace NFine.Code
+namespace Code
 {
     public static partial class ExtLinq
     {

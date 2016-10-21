@@ -1,12 +1,12 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Code;
+using Code;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace NFine.Data
+namespace Data
 {
     /// <summary>
     /// 仓储接口

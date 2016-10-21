@@ -1,7 +1,7 @@
 ﻿using System.Configuration;
 using System.Web;
 
-namespace NFine.Code
+namespace Code
 {
     public sealed class Licence
     {

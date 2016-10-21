@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
 
-namespace NFine.Code
+namespace Code
 {
     /// <summary>
     /// 常用公共类

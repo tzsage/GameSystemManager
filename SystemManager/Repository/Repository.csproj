@@ -7,8 +7,8 @@
     <ProjectGuid>{875233BF-EA15-49E0-9A9C-77884A897FF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NFine.Repository</RootNamespace>
-    <AssemblyName>NFine.Repository</AssemblyName>
+    <RootNamespace>Repository</RootNamespace>
+    <AssemblyName>Repository</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

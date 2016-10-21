@@ -1,7 +1,7 @@
 ﻿/****************************************************************************************************************************************************************/
 using System;
 
-namespace NFine.Domain.Entity.SystemManage
+namespace Domain.Entity.SystemManage
 {
     public class OrganizeEntity : IEntity<OrganizeEntity>, ICreationAudited, IDeleteAudited, IModificationAudited
     {

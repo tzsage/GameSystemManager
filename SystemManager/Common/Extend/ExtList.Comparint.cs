@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NFine.Code
+namespace Code
 {
     public class ExtList<T> : IEqualityComparer<T> where T : class, new()
     {

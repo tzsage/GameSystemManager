@@ -1,11 +1,11 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Code;
-using NFine.Data;
-using NFine.Domain.Entity.SystemManage;
-using NFine.Domain.IRepository.SystemManage;
-using NFine.Repository.SystemManage;
+using Code;
+using Data;
+using Domain.Entity.SystemManage;
+using Domain.IRepository.SystemManage;
+using Repository.SystemManage;
 
-namespace NFine.Repository.SystemManage
+namespace Repository.SystemManage
 {
     public class UserRepository : RepositoryBase<UserEntity>, IUserRepository
     {

@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace NFine.Code.Extend
+namespace Code.Extend
 {
     public static class ExtList
     {

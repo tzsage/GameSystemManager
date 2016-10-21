@@ -1,12 +1,12 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Code;
-using NFine.Data;
-using NFine.Data.Extensions;
-using NFine.Domain.Entity.SystemSecurity;
-using NFine.Domain.IRepository.SystemSecurity;
-using NFine.Repository.SystemSecurity;
+using Code;
+using Data;
+using Data.Extensions;
+using Domain.Entity.SystemSecurity;
+using Domain.IRepository.SystemSecurity;
+using Repository.SystemSecurity;
 
-namespace NFine.Repository.SystemSecurity
+namespace Repository.SystemSecurity
 {
     public class DbBackupRepository : RepositoryBase<DbBackupEntity>, IDbBackupRepository
     {

@@ -1,10 +1,10 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Code;
-using NFine.Domain.Entity.SystemManage;
-using NFine.Domain.IRepository.SystemManage;
-using NFine.Repository.SystemManage;
+using Code;
+using Domain.Entity.SystemManage;
+using Domain.IRepository.SystemManage;
+using Repository.SystemManage;
 
-namespace NFine.Application.SystemManage
+namespace Application.SystemManage
 {
     public class UserLogOnApp
     {

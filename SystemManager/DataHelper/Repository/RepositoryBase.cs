@@ -1,5 +1,5 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Code;
+using Code;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,7 +11,7 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace NFine.Data
+namespace Data
 {
     /// <summary>
     /// 仓储实现

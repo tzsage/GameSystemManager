@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NFine.Code
+namespace Code
 {
     public static partial class Ext
     {

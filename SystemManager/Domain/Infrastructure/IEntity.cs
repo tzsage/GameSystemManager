@@ -1,8 +1,8 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Code;
+using Code;
 using System;
 
-namespace NFine.Domain
+namespace Domain
 {
     public class IEntity<TEntity>
     {

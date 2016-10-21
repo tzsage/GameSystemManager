@@ -1,13 +1,13 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Code;
-using NFine.Domain.Entity.SystemSecurity;
-using NFine.Domain.IRepository.SystemSecurity;
-using NFine.Repository.SystemSecurity;
+using Code;
+using Domain.Entity.SystemSecurity;
+using Domain.IRepository.SystemSecurity;
+using Repository.SystemSecurity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace NFine.Application.SystemSecurity
+namespace Application.SystemSecurity
 {
     public class DbBackupApp
     {

@@ -5,7 +5,7 @@ using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.Data;
 
-namespace NFine.Code
+namespace Code
 {
     public static class Json
     {

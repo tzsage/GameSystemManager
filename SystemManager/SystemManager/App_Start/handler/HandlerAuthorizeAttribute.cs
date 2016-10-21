@@ -1,10 +1,10 @@
-﻿using NFine.Application.SystemManage;
-using NFine.Code;
+﻿using Application.SystemManage;
+using Code;
 using System.Text;
 using System.Web;
 using System.Web.Mvc;
 
-namespace NFine.Web
+namespace Web
 {
     public class HandlerAuthorizeAttribute : ActionFilterAttribute
     {

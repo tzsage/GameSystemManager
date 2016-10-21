@@ -9,7 +9,7 @@ using System.Net.Security;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
-namespace NFine.Code
+namespace Code
 {
     public class HttpMethods
     {

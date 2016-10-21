@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NFine.Code
+namespace Code
 {
     public static class TreeGrid
     {

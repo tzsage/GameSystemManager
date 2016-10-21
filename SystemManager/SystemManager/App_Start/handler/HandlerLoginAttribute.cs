@@ -1,7 +1,7 @@
-﻿using NFine.Code;
+﻿using Code;
 using System.Web.Mvc;
 
-namespace NFine.Web
+namespace Web
 {
     public class HandlerLoginAttribute : AuthorizeAttribute
     {

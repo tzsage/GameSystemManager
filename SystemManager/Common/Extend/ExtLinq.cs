@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace NFine.Code
+namespace Code
 {
     public static partial class ExtLinq
     {

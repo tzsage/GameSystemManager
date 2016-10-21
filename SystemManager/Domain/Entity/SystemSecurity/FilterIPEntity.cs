@@ -1,7 +1,7 @@
 ﻿/****************************************************************************************************************************************************************/
 using System;
 
-namespace NFine.Domain.Entity.SystemSecurity
+namespace Domain.Entity.SystemSecurity
 {
     public class DbBackupEntity : ICreationAudited, IDeleteAudited, IModificationAudited
     {

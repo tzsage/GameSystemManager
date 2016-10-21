@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
 
-namespace NFine.Data.Extensions
+namespace Data.Extensions
 {
     public class DbHelper
     {

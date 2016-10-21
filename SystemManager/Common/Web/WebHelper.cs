@@ -7,7 +7,7 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
-namespace NFine.Code
+namespace Code
 {
     public class WebHelper
     {

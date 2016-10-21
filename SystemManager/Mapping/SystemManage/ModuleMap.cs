@@ -1,8 +1,8 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Domain.Entity.SystemManage;
+using Domain.Entity.SystemManage;
 using System.Data.Entity.ModelConfiguration;
 
-namespace NFine.Mapping.SystemManage
+namespace Mapping.SystemManage
 {
     public class ModuleMap : EntityTypeConfiguration<ModuleEntity>
     {

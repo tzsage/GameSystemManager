@@ -6,7 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Web;
 
-namespace NFine.Code
+namespace Code
 {
     /// <summary>
     /// 网络操作

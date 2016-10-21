@@ -5,7 +5,7 @@ using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Reflection;
 
-namespace NFine.Data
+namespace Data
 {
     /// <summary>
     /// EF 数据库连接信息
@@ -23,7 +23,7 @@ namespace NFine.Data
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            string assembleFileName = Assembly.GetExecutingAssembly().CodeBase.Replace("NFine.Data.DLL", "NFine.Mapping.DLL").Replace("file:///", "");
+            string assembleFileName = Assembly.GetExecutingAssembly().CodeBase.Replace("DataHelper.DLL", "Mapping.DLL").Replace("file:///", "");
             Assembly asm = Assembly.LoadFile(assembleFileName);
             var typesToRegister = asm.GetTypes()
             .Where(type => !String.IsNullOrEmpty(type.Namespace))

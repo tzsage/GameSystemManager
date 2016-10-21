@@ -1,14 +1,14 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Data;
-using NFine.Domain.Entity.SystemManage;
-using NFine.Domain.IRepository.SystemManage;
-using NFine.Repository.SystemManage;
+using Data;
+using Domain.Entity.SystemManage;
+using Domain.IRepository.SystemManage;
+using Repository.SystemManage;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.SqlClient;
 using System.Text;
 
-namespace NFine.Repository.SystemManage
+namespace Repository.SystemManage
 {
     public class ItemsDetailRepository : RepositoryBase<ItemsDetailEntity>, IItemsDetailRepository
     {

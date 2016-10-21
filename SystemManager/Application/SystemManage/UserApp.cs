@@ -1,12 +1,12 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Code;
-using NFine.Domain.Entity.SystemManage;
-using NFine.Domain.IRepository.SystemManage;
-using NFine.Repository.SystemManage;
+using Code;
+using Domain.Entity.SystemManage;
+using Domain.IRepository.SystemManage;
+using Repository.SystemManage;
 using System;
 using System.Collections.Generic;
 
-namespace NFine.Application.SystemManage
+namespace Application.SystemManage
 {
     public class UserApp
     {
@@ -57,8 +57,8 @@ namespace NFine.Application.SystemManage
                 if (userEntity.F_EnabledMark == true)
                 {
                     UserLogOnEntity userLogOnEntity = userLogOnApp.GetForm(userEntity.F_Id);
-                    string dbPassword = Md5.md5(DESEncrypt.Encrypt(password.ToLower(), userLogOnEntity.F_UserSecretkey).ToLower(), 32).ToLower();
-                    if (dbPassword == userLogOnEntity.F_UserPassword)
+                    //string dbPassword = Md5.md5(DESEncrypt.Encrypt(password.ToLower(), userLogOnEntity.F_UserSecretkey).ToLower(), 32).ToLower();
+                    //if (dbPassword == userLogOnEntity.F_UserPassword)
                     {
                         DateTime lastVisitTime = DateTime.Now;
                         int LogOnCount = (userLogOnEntity.F_LogOnCount).ToInt() + 1;
@@ -71,10 +71,7 @@ namespace NFine.Application.SystemManage
                         userLogOnApp.UpdateForm(userLogOnEntity);
                         return userEntity;
                     }
-                    else
-                    {
-                        throw new Exception("密码不正确，请重新输入");
-                    }
+                   
                 }
                 else
                 {

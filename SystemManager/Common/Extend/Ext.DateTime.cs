@@ -2,7 +2,7 @@
 using System;
 using System.Text;
 
-namespace NFine.Code
+namespace Code
 {
     public static partial class Ext
     {

@@ -4,7 +4,7 @@ using System.Collections;
 using System.Web;
 
 
-namespace NFine.Code
+namespace Code
 {
     public class Cache : ICache
     {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Web;
 
 namespace SystemManager.Controllers
 {
@@ -24,6 +25,12 @@ namespace SystemManager.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Default()
+        {
             return View();
         }
     }

@@ -3,7 +3,7 @@ using System;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace NFine.Code
+namespace Code
 {
     /// <summary>
     /// DES加密、解密帮助类

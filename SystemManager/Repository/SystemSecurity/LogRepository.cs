@@ -1,10 +1,10 @@
 ﻿/****************************************************************************************************************************************************************/
-using NFine.Data;
-using NFine.Domain.Entity.SystemSecurity;
-using NFine.Domain.IRepository.SystemSecurity;
-using NFine.Repository.SystemSecurity;
+using Data;
+using Domain.Entity.SystemSecurity;
+using Domain.IRepository.SystemSecurity;
+using Repository.SystemSecurity;
 
-namespace NFine.Repository.SystemSecurity
+namespace Repository.SystemSecurity
 {
     public class LogRepository : RepositoryBase<LogEntity>, ILogRepository
     {
