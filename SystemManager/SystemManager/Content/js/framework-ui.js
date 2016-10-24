@@ -390,20 +390,7 @@ $.fn.bindSelect = function (options) {
         });
     }
 }
-$.fn.authorizeButton = function () {
-    var moduleId = top.$(".NFine_iframe:visible").attr("id").substr(6);
-    var dataJson = top.clients.authorizeButton[moduleId];
-    var $element = $(this);
-    $element.find('a[authorize=yes]').attr('authorize', 'no');
-    if (dataJson != undefined) {
-        $.each(dataJson, function (i) {
-            $element.find("#" + dataJson[i].F_EnCode).attr('authorize', 'yes');
-        });
-    }
-    $element.find("[authorize=no]").parents('li').prev('.split').remove();
-    $element.find("[authorize=no]").parents('li').remove();
-    $element.find('[authorize=no]').remove();
-}
+
 $.fn.dataGrid = function (options) {
     var defaults = {
         datatype: "json",

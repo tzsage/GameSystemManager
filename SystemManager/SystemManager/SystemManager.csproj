@@ -201,6 +201,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\SystemManager\Controllers\RolesManagerController.cs" />
+    <Compile Include="Areas\SystemManager\Controllers\UserManagerController.cs" />
+    <Compile Include="Areas\SystemManager\SystemManagerAreaRegistration.cs" />
     <Compile Include="Controllers\ClientsDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -259,18 +262,6 @@
     <Content Include="Content\js\datepicker\skin\whyGreen\datepicker.css" />
     <Content Include="Content\js\datepicker\skin\whyGreen\img.gif" />
     <Content Include="Content\js\datepicker\WdatePicker.js" />
-    <Content Include="Content\js\datepicker\开发包\lang\en.js" />
-    <Content Include="Content\js\datepicker\开发包\lang\zh-cn.js" />
-    <Content Include="Content\js\datepicker\开发包\lang\zh-tw.js" />
-    <Content Include="Content\js\datepicker\开发包\readme.txt" />
-    <Content Include="Content\js\datepicker\开发包\skin\datePicker.gif" />
-    <Content Include="Content\js\datepicker\开发包\skin\datePicker.png" />
-    <Content Include="Content\js\datepicker\开发包\skin\default\datepicker.css" />
-    <Content Include="Content\js\datepicker\开发包\skin\default\img.gif" />
-    <Content Include="Content\js\datepicker\开发包\skin\WdatePicker.css" />
-    <Content Include="Content\js\datepicker\开发包\skin\whyGreen\bg.jpg" />
-    <Content Include="Content\js\datepicker\开发包\skin\whyGreen\datepicker.css" />
-    <Content Include="Content\js\datepicker\开发包\skin\whyGreen\img.gif" />
     <Content Include="Content\js\dialog\dialog.css" />
     <Content Include="Content\js\dialog\dialog.js" />
     <Content Include="Content\js\dialog\img\icon-ext.png" />
@@ -335,8 +326,6 @@
     <Content Include="Content\js\jquery-ui\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\js\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Content\js\jquery-ui\jquery-ui.min.css" />
-    <Content Include="Content\js\jquery-ui\jquery-ui.min.js" />
-    <Content Include="Content\js\layout\jquery.layout.js" />
     <Content Include="Content\js\loading\pace.min.js" />
     <Content Include="Content\js\md5\jquery.md5.js" />
     <Content Include="Content\js\qrcode\jquery.qrcode.js" />
@@ -457,6 +446,15 @@
     <Content Include="Content\js\simditor\css\editor.scss" />
     <Content Include="Content\js\simditor\css\fonticon.scss" />
     <Content Include="Content\js\simditor\css\simditor.scss" />
+    <Content Include="Areas\SystemManager\Views\web.config" />
+    <Content Include="Areas\SystemManager\Views\UserManager\Index.cshtml" />
+    <Content Include="Areas\SystemManager\Views\UserManager\Details.cshtml" />
+    <Content Include="Areas\SystemManager\Views\UserManager\Form.cshtml" />
+    <Content Include="Areas\SystemManager\Views\UserManager\Info.cshtml" />
+    <Content Include="Areas\SystemManager\Views\UserManager\RevisePassword.cshtml" />
+    <Content Include="Areas\SystemManager\Views\RolesManager\Index.cshtml" />
+    <Content Include="Areas\SystemManager\Views\RolesManager\Details.cshtml" />
+    <Content Include="Areas\SystemManager\Views\RolesManager\Form.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -489,6 +487,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\js\jquery\" />
+    <Folder Include="Views\SystemManager\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

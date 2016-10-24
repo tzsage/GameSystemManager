@@ -1,5 +1,6 @@
 ﻿/****************************************************************************************************************************************************************/
 using Code;
+using DataHelper.DBContext;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
@@ -17,7 +18,7 @@ namespace Data
     /// <typeparam name="TEntity"></typeparam>
     public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class,new()
     {
-        public NFineDbContext dbcontext = new NFineDbContext();
+        public SYSDbContext dbcontext = new SYSDbContext();
         public int Insert(TEntity entity)
         {
             dbcontext.Entry<TEntity>(entity).State = EntityState.Added;

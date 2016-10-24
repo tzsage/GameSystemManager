@@ -10,7 +10,7 @@ namespace Code
     /// </summary>
     public class DESEncrypt
     {
-        private static string DESKey = "nfine_desencrypt_2016";
+        private static string DESKey = "desencrypt_2016";
 
         #region ========加密========
         /// <summary>

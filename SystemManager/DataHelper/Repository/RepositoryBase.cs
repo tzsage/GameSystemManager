@@ -1,5 +1,6 @@
 ﻿/****************************************************************************************************************************************************************/
 using Code;
+using DataHelper.DBContext;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,7 +19,7 @@ namespace Data
     /// </summary>
     public class RepositoryBase : IRepositoryBase, IDisposable
     {
-        private NFineDbContext dbcontext = new NFineDbContext();
+        private SYSDbContext dbcontext = new SYSDbContext();
         private DbTransaction dbTransaction { get; set; }
         public IRepositoryBase BeginTrans()
         {

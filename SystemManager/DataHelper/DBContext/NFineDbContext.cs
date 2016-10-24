@@ -10,9 +10,9 @@ namespace Data
     /// <summary>
     /// EF 数据库连接信息
     /// </summary>
-    public class NFineDbContext : DbContext
+    public class SYSDbContext : DbContext
     {
-        public NFineDbContext()
+        public SYSDbContext()
             : base("NFineDbContext")
         {
             this.Configuration.AutoDetectChangesEnabled = false;

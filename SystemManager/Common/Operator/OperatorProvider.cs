@@ -1,13 +1,16 @@
 ﻿/****************************************************************************************************************************************************************/
 namespace Code
 {
+    /// <summary>
+    /// 操作者信息保存
+    /// </summary>
     public class OperatorProvider
     {
         public static OperatorProvider Provider
         {
             get { return new OperatorProvider(); }
         }
-        private string LoginUserKey = "nfine_loginuserkey_2016";
+        private string LoginUserKey = "loginuserkey";
         private string LoginProvider = Configs.GetValue("LoginProvider");
 
         public OperatorModel GetCurrent()
@@ -33,8 +36,8 @@ namespace Code
             {
                 WebHelper.WriteSession(LoginUserKey, DESEncrypt.Encrypt(operatorModel.ToJson()));
             }
-            WebHelper.WriteCookie("nfine_mac", Md5.md5(Net.GetMacByNetworkInterface().ToJson(), 32));
-            WebHelper.WriteCookie("nfine_licence", Licence.GetLicence());
+            //WebHelper.WriteCookie("nfine_mac", Md5.md5(Net.GetMacByNetworkInterface().ToJson(), 32));
+            //WebHelper.WriteCookie("nfine_licence", Licence.GetLicence());
         }
         public void RemoveCurrent()
         {

@@ -2,6 +2,7 @@
 using Application.SystemManage;
 using Application.SystemSecurity;
 using Code;
+using Domain.Entity.SystemFrame;
 using Domain.Entity.SystemManage;
 using Domain.Entity.SystemSecurity;
 using System;
@@ -21,8 +22,19 @@ namespace SystemManager.Controllers
         // GET: Login
         public ActionResult Index()
         {
+            getUser();
             return View();
         }
+
+        private void getUser()
+        {
+            //Data.IRepositoryBase<sys_UserEntiry> service = new Data.RepositoryBase<sys_UserEntiry>();
+            //var m= service.FindEntity(t => t.UserID == 1);
+
+            DataHelper.DBContext.SystemDBContext db = new DataHelper.DBContext.SystemDBContext();
+            db.Users.FirstOrDefault(t=>t.MenuID==1);
+        }
+
 
         [HttpGet]
         public ActionResult GetAuthCode()

@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="systemframe\UserMap.cs" />
     <Compile Include="SystemManage\AreaMap.cs" />
     <Compile Include="SystemManage\ItemsDetailMap.cs" />
     <Compile Include="SystemManage\ItemsMap.cs" />
@@ -64,6 +65,10 @@
     <Compile Include="SystemSecurity\LogMap.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataHelper\DataHelper.csproj">
+      <Project>{C2E4E102-049F-4EF8-98AD-16EC62E40C90}</Project>
+      <Name>DataHelper</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{7dc886cd-b8a0-44e8-aadd-57fcb0cfecb8}</Project>
       <Name>Domain</Name>
