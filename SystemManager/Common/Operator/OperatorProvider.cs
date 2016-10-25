@@ -30,7 +30,7 @@ namespace Code
         {
             if (LoginProvider == "Cookie")
             {
-                WebHelper.WriteCookie(LoginUserKey, DESEncrypt.Encrypt(operatorModel.ToJson()), 60);
+                WebHelper.WriteCookie(LoginUserKey, DESEncrypt.Encrypt(operatorModel.ToJson()), 24*60);
             }
             else
             {

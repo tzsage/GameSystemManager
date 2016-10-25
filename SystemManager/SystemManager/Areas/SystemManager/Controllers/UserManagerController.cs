@@ -34,7 +34,7 @@ namespace SystemManager.Areas.SystemManager.Controllers
         }
 
         [HttpGet]
-        [HandlerAjaxOnly]
+       
         public ActionResult GetFormJson(string keyValue)
         {
             var data = userApp.GetForm(keyValue);

@@ -2,6 +2,7 @@
     ViewBag.Title = "Form";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<script src="~/Content/js/wizard/wizard.js"></script>
 <script>
     var keyValue = $.request("keyValue");
     $(function () {
@@ -40,6 +41,8 @@
                 $next.removeAttr('disabled');
             }
         });
+       
+
         $("#permissionTree").treeview({
             height: 493,
             showcheck: true,

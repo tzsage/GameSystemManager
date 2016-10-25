@@ -7,7 +7,7 @@
     $(function () {
         initControl();
         $.ajax({
-            url: "/SystemManage/User/GetFormJson",
+            url: "/SystemManager/UserManager/GetFormJson",
             data: { keyValue: keyValue },
             dataType: "json",
             async: false,
@@ -24,32 +24,41 @@
         $("#F_IsAdministrator").bindSelect()
         $("#F_EnabledMark").bindSelect()
         $("#F_OrganizeId").bindSelect({
-            url: "/SystemManage/Organize/GetTreeSelectJson"
+            url: "/SystemManager/Organize/GetTreeSelectJson"
         });
         $("#F_DepartmentId").bindSelect({
-            url: "/SystemManage/Organize/GetTreeSelectJson",
+            url: "/SystemManager/Organize/GetTreeSelectJson",
         });
         $("#F_RoleId").bindSelect({
-            url: "/SystemManage/Role/GetGridJson",
+            url: "/SystemManager/RolesManager/GetGridJson",
             id: "F_Id",
             text: "F_FullName"
         });
         $("#F_DutyId").bindSelect({
-            url: "/SystemManage/Duty/GetGridJson",
+            url: "/SystemManager/Duty/GetGridJson",
             id: "F_Id",
             text: "F_FullName"
         });
     }
+
+    function changeview(a,b)
+    {
+        $("#divviews").find("div").each(function () { $(this).css("display", "none") });
+        $("#" + a).css("display", "block");
+        $(".active").each(function () { $(this).removeClass("active"); })
+        $(b).parent().addClass("active");
+    }
+
 </script>
 <form id="form1">
-    <div style="margin-top: 10px; margin-left: 10px; margin-right: 10px;">
+    <div id="divviews" style="margin-top: 10px; margin-left: 10px; margin-right: 10px;">
         <ul class="nav nav-tabs">
-            <li class="active"><a href="#">基本信息</a></li>
-            <li><a href="javascript:void()">扩展信息</a></li>
-            <li><a href="javascript:void()">登录日志</a></li>
-            <li><a href="javascript:void()">操作日志</a></li>
+            <li class="active"><a  href="javascript:changeview('a',this)">基本信息</a></li>
+            <li><a href="javascript:changeview('b',this)">扩展信息</a></li>
+            <li><a href="javascript:changeview('c',this)">登录日志</a></li>
+            <li><a href="javascript:changeview('d',this)">操作日志</a></li>
         </ul>
-        <div style="padding-top: 20px; margin-right: 30px;">
+        <div id="a" style="padding-top: 20px; margin-right: 30px;">
             <table class="form">
                 <tr>
                     <th class="formTitle">账户</th>
@@ -166,5 +175,8 @@
                 </tr>
             </table>
         </div>
+        <div id="b" style="padding-top: 20px; margin-right: 30px;display:none" >扩展信息</div>
+        <div id="c" style="padding-top: 20px; margin-right: 30px;display:none">登录日志</div>
+        <div id="d" style="padding-top: 20px; margin-right: 30px;display:none">操作日志</div>
     </div>
 </form>

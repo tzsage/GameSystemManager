@@ -201,6 +201,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\SystemManager\Controllers\DutyController.cs" />
+    <Compile Include="Areas\SystemManager\Controllers\ItemsDataController.cs" />
+    <Compile Include="Areas\SystemManager\Controllers\ItemTypeController.cs" />
+    <Compile Include="Areas\SystemManager\Controllers\MenuButtonController.cs" />
+    <Compile Include="Areas\SystemManager\Controllers\MenuController.cs" />
+    <Compile Include="Areas\SystemManager\Controllers\OrganizeController.cs" />
+    <Compile Include="Areas\SystemManager\Controllers\RoleAuthorizeController.cs" />
     <Compile Include="Areas\SystemManager\Controllers\RolesManagerController.cs" />
     <Compile Include="Areas\SystemManager\Controllers\UserManagerController.cs" />
     <Compile Include="Areas\SystemManager\SystemManagerAreaRegistration.cs" />
@@ -326,6 +333,8 @@
     <Content Include="Content\js\jquery-ui\images\ui-icons_888888_256x240.png" />
     <Content Include="Content\js\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Content\js\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Content\js\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\js\layout\jquery.layout.js" />
     <Content Include="Content\js\loading\pace.min.js" />
     <Content Include="Content\js\md5\jquery.md5.js" />
     <Content Include="Content\js\qrcode\jquery.qrcode.js" />
@@ -455,6 +464,22 @@
     <Content Include="Areas\SystemManager\Views\RolesManager\Index.cshtml" />
     <Content Include="Areas\SystemManager\Views\RolesManager\Details.cshtml" />
     <Content Include="Areas\SystemManager\Views\RolesManager\Form.cshtml" />
+    <Content Include="Areas\SystemManager\Views\Menu\Index.cshtml" />
+    <Content Include="Areas\SystemManager\Views\MenuButton\CloneButton.cshtml" />
+    <Content Include="Areas\SystemManager\Views\MenuButton\Details.cshtml" />
+    <Content Include="Areas\SystemManager\Views\MenuButton\Form.cshtml" />
+    <Content Include="Areas\SystemManager\Views\MenuButton\Index.cshtml" />
+    <Content Include="Areas\SystemManager\Views\Menu\Details.cshtml" />
+    <Content Include="Areas\SystemManager\Views\Menu\Form.cshtml" />
+    <Content Include="Areas\SystemManager\Views\ItemType\Details.cshtml" />
+    <Content Include="Areas\SystemManager\Views\ItemType\Form.cshtml" />
+    <Content Include="Areas\SystemManager\Views\ItemType\Index.cshtml" />
+    <Content Include="Areas\SystemManager\Views\ItemsData\Details.cshtml" />
+    <Content Include="Areas\SystemManager\Views\ItemsData\Form.cshtml" />
+    <Content Include="Areas\SystemManager\Views\ItemsData\Index.cshtml" />
+    <Content Include="Areas\SystemManager\Views\Organize\Details.cshtml" />
+    <Content Include="Areas\SystemManager\Views\Organize\Form.cshtml" />
+    <Content Include="Areas\SystemManager\Views\Organize\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -483,6 +508,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
