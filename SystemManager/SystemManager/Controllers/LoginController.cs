@@ -28,11 +28,11 @@ namespace SystemManager.Controllers
 
         private void getUser()
         {
-            //Data.IRepositoryBase<sys_UserEntiry> service = new Data.RepositoryBase<sys_UserEntiry>();
-            //var m= service.FindEntity(t => t.UserID == 1);
+            Data.RepositoryBase<UserInfoModel> service = new Data.RepositoryBase<UserInfoModel>();
+            var m= service.FindEntity(t => t.UserID == 1);
 
-            DataHelper.DBContext.SystemDBContext db = new DataHelper.DBContext.SystemDBContext();
-            db.Users.FirstOrDefault(t=>t.MenuID==1);
+            //DataHelper.DBContext.SystemDBContext db = new DataHelper.DBContext.SystemDBContext();
+            //db.Users.FirstOrDefault(t=>t.MenuID==1);
         }
 
 

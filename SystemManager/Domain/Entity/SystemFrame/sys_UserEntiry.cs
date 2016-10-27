@@ -16,4 +16,16 @@ namespace Domain.Entity.SystemFrame
         public DateTime LastLoginTime { get; set; }
         public string UserPhoto { get; set; }
     }
+
+
+    public class UserInfoModel
+    {
+        public long UserID { get; set; }
+        public string UserName { get; set; }
+        public string UserPassword { get; set; }
+        public DateTime CreateTime { get; set; }
+        public int Status { get; set; }
+        public string NickName { get; set; }
+        public DateTime LastLoginTime { get; set; }
+    }
 }

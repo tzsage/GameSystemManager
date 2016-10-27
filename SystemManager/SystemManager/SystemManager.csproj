@@ -201,6 +201,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Reports\ReportsAreaRegistration.cs" />
     <Compile Include="Areas\SystemManager\Controllers\DutyController.cs" />
     <Compile Include="Areas\SystemManager\Controllers\ItemsDataController.cs" />
     <Compile Include="Areas\SystemManager\Controllers\ItemTypeController.cs" />
@@ -480,6 +481,7 @@
     <Content Include="Areas\SystemManager\Views\Organize\Details.cshtml" />
     <Content Include="Areas\SystemManager\Views\Organize\Form.cshtml" />
     <Content Include="Areas\SystemManager\Views\Organize\Index.cshtml" />
+    <Content Include="Areas\Reports\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -512,8 +514,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Reports\Controllers\" />
+    <Folder Include="Areas\Reports\Models\" />
+    <Folder Include="Areas\Reports\Views\Shared\" />
     <Folder Include="Content\js\jquery\" />
-    <Folder Include="Views\SystemManager\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

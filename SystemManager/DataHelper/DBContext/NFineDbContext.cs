@@ -13,7 +13,7 @@ namespace Data
     public class SYSDbContext : DbContext
     {
         public SYSDbContext()
-            : base("NFineDbContext")
+            : base("SystemFrameworkDbContext")
         {
             this.Configuration.AutoDetectChangesEnabled = false;
             this.Configuration.ValidateOnSaveEnabled = false;

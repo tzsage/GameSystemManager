@@ -23,4 +23,14 @@ namespace Mapping.SystemManage
             this.HasKey(t => t.MenuID);
         }
     }
+
+    public class UserInfoMap : EntityTypeConfiguration<UserInfoModel>
+    {
+        public UserInfoMap()
+        {
+            this.ToTable("tblUser");
+            this.HasKey(t => t.UserID);
+        }
+
+    }
 }
