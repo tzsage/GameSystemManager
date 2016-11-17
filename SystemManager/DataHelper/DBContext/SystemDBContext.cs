@@ -18,8 +18,6 @@ namespace DataHelper.DBContext
           
         }
 
-        public DbSet<TestEntiry> Users { get; set; }
-
         /// <summary>
         /// 配置实体类通过map对应到数据库表
         /// </summary>
@@ -40,14 +38,6 @@ namespace DataHelper.DBContext
         }
     }
 
-
-    public class TestEntiry
-    {
-       public long MenuID { get; set; }
-        public string MenuName { get; set; }
-        public string MenuPath { get; set; }
-        public string MenuStatus { get; set; }
-    }
   
 
 }

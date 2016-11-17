@@ -22,14 +22,14 @@ namespace SystemManager.Controllers
         // GET: Login
         public ActionResult Index()
         {
-            getUser();
+            //getUser();
             return View();
         }
 
         private void getUser()
         {
-            Data.RepositoryBase<UserInfoModel> service = new Data.RepositoryBase<UserInfoModel>();
-            var m= service.FindEntity(t => t.UserID == 1);
+            //Data.RepositoryBase<UserInfoModel> service = new Data.RepositoryBase<UserInfoModel>();
+            //var m= service.FindEntity(t => t.UserID == 1);
 
             //DataHelper.DBContext.SystemDBContext db = new DataHelper.DBContext.SystemDBContext();
             //db.Users.FirstOrDefault(t=>t.MenuID==1);

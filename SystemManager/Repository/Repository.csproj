@@ -54,6 +54,11 @@
     <Compile Include="SystemSecurity\DbBackupRepository.cs" />
     <Compile Include="SystemSecurity\FilterIPRepository.cs" />
     <Compile Include="SystemSecurity\LogRepository.cs" />
+    <Compile Include="WebManage\ADRepository.cs" />
+    <Compile Include="WebManage\WebExpRepository.cs" />
+    <Compile Include="WebManage\WebGameRepository.cs" />
+    <Compile Include="WebManage\WebNewsRepository.cs" />
+    <Compile Include="WebManage\WebUserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Common\Common.csproj">

@@ -15,22 +15,13 @@ namespace Mapping.SystemManage
         }
     }
 
-    public class mMap : EntityTypeConfiguration<TestEntiry>
-    {
-        public mMap()
-        {
-            this.ToTable("sys_Menu");
-            this.HasKey(t => t.MenuID);
-        }
-    }
+    //public class UserInfoMap : EntityTypeConfiguration<UserInfoModel>
+    //{
+    //    public UserInfoMap()
+    //    {
+    //        this.ToTable("tblUser");
+    //        this.HasKey(t => t.UserID);
+    //    }
 
-    public class UserInfoMap : EntityTypeConfiguration<UserInfoModel>
-    {
-        public UserInfoMap()
-        {
-            this.ToTable("tblUser");
-            this.HasKey(t => t.UserID);
-        }
-
-    }
+    //}
 }

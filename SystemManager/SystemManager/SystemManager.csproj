@@ -84,12 +84,24 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -201,7 +213,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Reports\ReportsAreaRegistration.cs" />
+    <Compile Include="Areas\SystemManager\Controllers\CustomController.cs" />
     <Compile Include="Areas\SystemManager\Controllers\DutyController.cs" />
     <Compile Include="Areas\SystemManager\Controllers\ItemsDataController.cs" />
     <Compile Include="Areas\SystemManager\Controllers\ItemTypeController.cs" />
@@ -212,6 +226,11 @@
     <Compile Include="Areas\SystemManager\Controllers\RolesManagerController.cs" />
     <Compile Include="Areas\SystemManager\Controllers\UserManagerController.cs" />
     <Compile Include="Areas\SystemManager\SystemManagerAreaRegistration.cs" />
+    <Compile Include="Areas\WebManager\Controllers\ADManageController.cs" />
+    <Compile Include="Areas\WebManager\Controllers\CategoryManageController.cs" />
+    <Compile Include="Areas\WebManager\Controllers\CustomManageController.cs" />
+    <Compile Include="Areas\WebManager\Controllers\GameManageController.cs" />
+    <Compile Include="Areas\WebManager\WebManagerAreaRegistration.cs" />
     <Compile Include="Controllers\ClientsDataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -224,6 +243,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="WebApi\CommonAPIController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -282,6 +302,11 @@
     <Content Include="Content\js\echarts\echarts.js" />
     <Content Include="Content\js\echarts\echarts.min.js" />
     <Content Include="Content\js\echarts\infographic.js" />
+    <Content Include="Content\js\fileinput\fileinput.css" />
+    <Content Include="Content\js\fileinput\fileinput.js" />
+    <Content Include="Content\js\fileinput\fileinput.min.css" />
+    <Content Include="Content\js\fileinput\fileinput.min.js" />
+    <Content Include="Content\js\fileinput\zh.js" />
     <Content Include="Content\js\framework-clientdata.js" />
     <Content Include="Content\js\framework-ui.js" />
     <Content Include="Content\js\highcharts\adapters\mootools-adapter.js" />
@@ -434,7 +459,9 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Configs\database.config" />
+    <Content Include="Configs\database.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Configs\log4net.config" />
     <Content Include="Configs\system.config">
       <SubType>Designer</SubType>
@@ -482,6 +509,17 @@
     <Content Include="Areas\SystemManager\Views\Organize\Form.cshtml" />
     <Content Include="Areas\SystemManager\Views\Organize\Index.cshtml" />
     <Content Include="Areas\Reports\Views\web.config" />
+    <Content Include="Areas\SystemManager\Views\Custom\Index.cshtml" />
+    <Content Include="Areas\WebManager\Views\web.config" />
+    <Content Include="Areas\WebManager\Views\ADManage\Index.cshtml" />
+    <Content Include="Areas\WebManager\Views\CustomManage\Index.cshtml" />
+    <Content Include="Areas\WebManager\Views\GameManage\Index.cshtml" />
+    <Content Include="Areas\WebManager\Views\CategoryManage\Index.cshtml" />
+    <Content Include="Areas\WebManager\Views\ADManage\Edit.cshtml" />
+    <Content Include="Areas\WebManager\Views\ADManage\Details.cshtml" />
+    <Content Include="Areas\WebManager\Views\ADManage\ADIndex.cshtml" />
+    <Content Include="Areas\WebManager\Views\ADManage\ADEdit.cshtml" />
+    <Content Include="Areas\WebManager\Views\ADManage\ADDetails.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -494,7 +532,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -517,6 +557,7 @@
     <Folder Include="Areas\Reports\Controllers\" />
     <Folder Include="Areas\Reports\Models\" />
     <Folder Include="Areas\Reports\Views\Shared\" />
+    <Folder Include="Areas\WebManager\Views\Shared\" />
     <Folder Include="Content\js\jquery\" />
   </ItemGroup>
   <ItemGroup>

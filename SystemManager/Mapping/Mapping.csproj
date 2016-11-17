@@ -63,6 +63,11 @@
     <Compile Include="SystemSecurity\DbBackupMap.cs" />
     <Compile Include="SystemSecurity\FilterIPMap.cs" />
     <Compile Include="SystemSecurity\LogMap.cs" />
+    <Compile Include="WebManage\WebADMap.cs" />
+    <Compile Include="WebManage\WebExpMap.cs" />
+    <Compile Include="WebManage\WebGameMap.cs" />
+    <Compile Include="WebManage\WebNewsMap.cs" />
+    <Compile Include="WebManage\WebUserMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DataHelper\DataHelper.csproj">

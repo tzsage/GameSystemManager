@@ -81,3 +81,9 @@ D:\Git\GameSystemManager\SystemManager\SystemManager.Tests\bin\Debug\Repository.
 D:\Git\GameSystemManager\SystemManager\SystemManager.Tests\bin\Debug\Domain.pdb
 D:\Git\GameSystemManager\SystemManager\SystemManager.Tests\bin\Debug\Application.pdb
 D:\Git\GameSystemManager\SystemManager\SystemManager.Tests\bin\Debug\Repository.pdb
+D:\Git\GameSystemManager\SystemManager\SystemManager.Tests\bin\Debug\System.Web.Http.dll
+D:\Git\GameSystemManager\SystemManager\SystemManager.Tests\bin\Debug\System.Net.Http.Formatting.dll
+D:\Git\GameSystemManager\SystemManager\SystemManager.Tests\bin\Debug\System.Web.Http.xml
+D:\Git\GameSystemManager\SystemManager\SystemManager.Tests\bin\Debug\System.Net.Http.Formatting.xml
+D:\Git\GameSystemManager\SystemManager\SystemManager.Tests\bin\Debug\System.Web.Http.WebHost.dll
+D:\Git\GameSystemManager\SystemManager\SystemManager.Tests\bin\Debug\System.Web.Http.WebHost.xml

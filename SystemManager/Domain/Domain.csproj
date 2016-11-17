@@ -41,6 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\SystemFrame\sys_UserEntiry.cs" />
+    <Compile Include="Entity\WebManage\ADModel.cs" />
+    <Compile Include="Entity\WebManage\ExpModel.cs" />
+    <Compile Include="Entity\WebManage\GameModel.cs" />
+    <Compile Include="Entity\WebManage\NewsModel.cs" />
+    <Compile Include="Entity\WebManage\WebUserModel.cs" />
     <Compile Include="Infrastructure\ICreationAudited.cs" />
     <Compile Include="Infrastructure\IDeleteAudited.cs" />
     <Compile Include="Infrastructure\IEntity.cs" />

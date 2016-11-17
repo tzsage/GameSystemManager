@@ -311,6 +311,9 @@ $.fn.formSerialize = function (formdate) {
             if ($id.hasClass("select2-hidden-accessible")) {
                 type = "select";
             }
+            if ($id.hasClass("img")) {
+                type = "img";
+            }
             switch (type) {
                 case "checkbox":
                     if (value == "true") {
@@ -318,6 +321,9 @@ $.fn.formSerialize = function (formdate) {
                     } else {
                         $id.removeAttr("checked");
                     }
+                    break;
+                case "img":
+                    $id.attr("src", value);
                     break;
                 case "select":
                     $id.val(value).trigger("change");
