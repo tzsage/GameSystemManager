@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewBag.Title = "CategoryEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+    var keyValue = $.request("CID");
+    $(function () {
+        initControl();
+        if (!!keyValue) {
+            $.ajax({
+                url: "/WebManager/CategoryManage/GetFormData",
+                data: { CID: keyValue },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    $("#form1").formSerialize(data);
+                }
+            });
+        }
+    });
+    function initControl() {
+        $("#PID").bindSelect({
+            url: "/WebManager/CategoryManage/GetTreeSelectJson"
+        });
+    }
+    function submitForm() {
+        if (!$('#form1').formValid()) {
+            return false;
+        }
+        $.submitForm({
+            url: "/WebManager/CategoryManage/SaveCModify?CID=0" + keyValue,
+            param: $("#form1").formSerialize(),
+            success: function () {
+                top.ItemsType.$("#gridList").resetSelection();
+                top.ItemsType.$("#gridList").trigger("reloadGrid");
+            }
+        })
+    }
+</script>
+<form id="form1">
+    <div style="padding-top: 20px; margin-right: 20px;">
+        <table class="form">
+            <tr>
+                <th class="formTitle">上级</th>
+                <td class="formValue">
+                    <select id="PID" name="PID" class="form-control required">
+                        <option value="0">父节点</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">名称</th>
+                <td class="formValue">
+                    <input id="CName" name="CName" type="text" class="form-control required" placeholder="请输入名称" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">路径</th>
+                <td class="formValue">
+                    <input id="CPath" name="CPath" type="text" class="form-control" placeholder="路径" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle" style="height: 35px;">选项</th>
+                <td class="formValue" style="padding-top: 1px;">
+                    <div class="ckbox">
+                        <input id="CStatus" name="CStatus" type="checkbox" checked="checked"><label for="CStatus">有效</label>
+                    </div>
+                </td>
+            </tr>
+         
+        </table>
+    </div>
+</form>
+
+
+

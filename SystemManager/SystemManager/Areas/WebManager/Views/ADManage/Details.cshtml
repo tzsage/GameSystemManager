@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+    var keyValue = $.request("keyValue");
+    $(function () {
+        $("#APID").bindSelect({
+            url: "/WebManager/ADManage/GetTreeSelectJson"
+        });
+        if (!!keyValue) {
+            $.ajax({
+                url: "/WebManager/ADManage/ADItemData",
+                data: { lAid: keyValue },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    $("#form1").formSerialize(data);
+                }
+            });
+        }
+    });
+</script>
+<form id="form1">
+    <div style="padding-top: 20px; margin-right: 20px;">
+        <table class="form">
+            <tr>
+                <th class="formTitle">标题</th>
+                <td class="formValue">
+                    <input id="IName" name="IName" type="text" class="form-control required" placeholder="请输入名称" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">链接地址</th>
+                <td class="formValue">
+                    <input id="IAddress" name="IAddress" type="text" class="form-control required" placeholder="请输入链接" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">图片</th>
+                <td class="formValue">
+                    <img src="" id="IPath" class="img"  height="75px"/>
+                </td>
+            </tr>
+
+            <tr>
+                <th class="formTitle">时间</th>
+                <td class="formValue">
+                    <input id="IStartTime" name="IStartTime" type="text" class="form-control input-wdatepicker" onfocus="WdatePicker()" />-
+                    <input id="IEndTime" name="IEndTime" type="text" class="form-control input-wdatepicker" onfocus="WdatePicker()" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle" style="height: 35px;">选项</th>
+                <td class="formValue" style="padding-top: 1px;">
+                    <div class="ckbox">
+                        <input id="IStatus" name="IStatus" type="checkbox" checked="checked"><label for="IStatus">有效</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle" valign="top" style="padding-top: 5px;">
+                    备注
+                </th>
+                <td class="formValue">
+                    <textarea id="IDesc" name="IDesc" class="form-control" style="height: 60px;"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+

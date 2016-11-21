@@ -1,0 +1,130 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Content/js/fileinput/fileinput.min.js"></script>
+<script src="~/Content/js/fileinput/zh.js"></script>
+<link href="~/Content/js/fileinput/fileinput.min.css" rel="stylesheet" />
+<script>
+    var keyValue = $.request("keyValue");
+    var itemId = $.request("itemId");
+    var itemName = $.request("itemName");
+    var img;
+    $(function () {
+        initControl();
+        if (!!keyValue) {
+            $.ajax({
+                url: "/WebManager/ADManage/ADItemData",
+                data: { lAid: keyValue },
+                dataType: "json",
+                async: false,
+                success: function (data) {
+                    $("#form1").formSerialize(data);
+                    InitImgUpload("imgfile", $("#IPath").val());
+                }
+            });
+        }
+        else {
+            InitImgUpload("imgfile","");
+        }
+    });
+
+    function InitImgUpload(imgId, ImgList)
+    {
+        var imglst = [];
+        var lst=ImgList.split(',');
+        for (var i = 0; i < lst.length; i++)
+        {
+            if (lst[i].length>0)
+            imglst[i] = "<img style='height:160px' src='" + lst[i] + "'>";
+        }
+
+        $("#" + imgId).fileinput({
+            uploadUrl: "/api/CommonAPI/UploadImage", // server upload action
+            allowedFileExtensions: ['jpg', 'png', 'gif'],
+            uploadAsync: true,
+            initialPreview: imglst,
+            maxFileCount: 5
+        }).on('fileuploaded', function (event, data, id, index) {
+            $('#IPath').val(data.response);
+        });
+    }
+
+
+
+    function initControl() {
+        $("#form1").attr("action", "/WebManager/ADManage/ADSave?lAid=0" + keyValue);
+        $("#AID").val(itemId);
+    }
+    function submitForm() {
+        if (!$('#form1').formValid()) {
+            return false;
+        }
+        //$("#form1").submit();
+        $.submitForm({
+            url: "/WebManager/ADManage/ADSave?lAid=0" + keyValue,
+            param: $("#form1").formSerialize(),
+            success: function () {
+                $.currentWindow().$("#gridList").trigger("reloadGrid");
+            }
+        })
+    }
+
+   
+
+</script>
+
+<form id="form1" enctype="multipart/form-data" method="post"  >
+    <div style="padding-top: 20px; margin-right: 20px;">
+        <input type="hidden" id="AID" name="AID" />
+        <table class="form">
+            <tr>
+                <th class="formTitle">标题</th>
+                <td class="formValue">
+                    <input id="IName" name="IName" type="text" class="form-control required" placeholder="请输入名称" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">链接地址</th>
+                <td class="formValue">
+                    <input id="IAddress" name="IAddress" type="text" class="form-control required" placeholder="请输入链接" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle">图片</th>
+                <td class="formValue">
+                    @*<input id="input-700" name="kartik-input-700[]" type="file" multiple class="file-loading">*@
+                    <input id="imgfile" name="imgfile" type="file" multiple class="file-loading"   />
+                    <input type="hidden" id="IPath" name="IPath" />
+                </td>
+            </tr>
+          
+            <tr>
+                <th class="formTitle">时间</th>
+                <td class="formValue">
+                    <input id="IStartTime" name="IStartTime" type="text" class="form-control input-wdatepicker" onfocus="WdatePicker()" />-
+                    <input id="IEndTime" name="IEndTime" type="text" class="form-control input-wdatepicker" onfocus="WdatePicker()" />
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle" style="height: 35px;">选项</th>
+                <td class="formValue" style="padding-top: 1px;">
+                    <div class="ckbox">
+                        <input id="IStatus" name="IStatus" type="checkbox" checked="checked"><label for="IStatus">有效</label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th class="formTitle" valign="top" style="padding-top: 5px;">
+                    备注
+                </th>
+                <td class="formValue">
+                    <textarea id="IDesc" name="IDesc" class="form-control" style="height: 60px;"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+</form>
+
+
