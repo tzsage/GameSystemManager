@@ -520,6 +520,9 @@
     <Content Include="Areas\WebManager\Views\ADManage\ADIndex.cshtml" />
     <Content Include="Areas\WebManager\Views\ADManage\ADEdit.cshtml" />
     <Content Include="Areas\WebManager\Views\ADManage\ADDetails.cshtml" />
+    <Content Include="Areas\WebManager\Views\CategoryManage\CategiryIndex.cshtml" />
+    <Content Include="Areas\WebManager\Views\CategoryManage\CategoryEdit.cshtml" />
+    <Content Include="Areas\WebManager\Views\CategoryManage\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
